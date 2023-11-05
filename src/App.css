@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --bgcolor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: #828286;
+  --main-text-color: #333333;
+}
+html {
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-text-color);
+}
+
+.main_heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+.para {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+.btn {
+  margin: 0 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.5rem;
+  border: 0.2rem solid var(--primary-color);
+  outline: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bgcolor);
+}
+.container {
+  margin: auto;
+  max-width: 108rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  width: 100%;
+}
+/* ------------------ Navbar start ---------------------- */
+nav {
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--bgcolor);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.NavBar {
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.brandname {
+  flex-grow: 1;
+}
+.brandname h2 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  background: -webkit-linear-gradient(var(--bgcolor), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brandname h2 span {
+  font-size: 3rem;
+}
+.brandname .homeLink {
+  text-decoration: none;
+}
+.manu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 2;
+}
+.hamberger {
+  display: none;
+}
+.manu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+.manu ul li {
+  position: relative;
+  padding: 5px 0;
+  /* cursor: pointer; */
+}
+
+.manu ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  bottom: 0;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+}
+.manu ul li:hover::after {
+  width: 100%;
+  left: 0;
+}
+.manu ul li .navBtn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+.sin_btns button {
+  margin: 0 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.5rem;
+  border: 0.2rem solid var(--primary-color);
+  outline: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+}
+.sin_btns button:hover,
+.sin_btns button.active {
+  background-color: var(--primary-color);
+  color: var(--bgcolor);
+}
+
+/* ------------------ Navbar end ---------------------- */
+
+/* ------------------ Hero start ---------------------- */
+section.hero {
+  min-height: calc(115vh - 5rem);
+  background-color: var(--bgcolor);
+}
+.main_hero {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.hero_left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  padding: 20px;
+}
+
+.hero_left .main_heading-hero {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--main-text-color);
+}
+.hero_left .para {
+  padding: 10px 15px 15px 0;
+}
+
+.hero_rigth {
+  width: 50%;
+}
+.hero_tagline {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 1.5rem 0 0 0;
+  color: var(--text-color);
+}
+.mail_box {
+  position: relative;
+  width: 70%;
+}
+.mail_box input {
+  /* position: absolute; */
+  width: 100%;
+  position: relative;
+  padding: 1.2rem 1.2rem;
+  border-radius: 2.5rem;
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mail_box button {
+  position: absolute;
+  top: 1.8rem;
+  width: max-content;
+  padding: 1.2rem 0.9rem;
+  right: -0.7rem;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.hero_rigth {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+.hero_rigth .firstImg {
+  width: 70%;
+  border-radius: 3rem;
+}
+.hero_rigth .secondImg {
+  position: absolute;
+  width: 45%;
+  top: -2rem;
+  right: 5rem;
+  border-radius: 2rem;
+}
+/* ------------------ Hero end ---------------------- */
+/* ------------------ How to work start ---------------------- */
+.how_to_work {
+  height: max-content;
+  padding: 3rem 0;
+}
+
+.main_how_to_work {
+  width: 90%;
+  height: max-content;
+  margin: auto;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: -15rem;
+  background: #fff;
+  padding: 10px 0;
+}
+.main_how_to_work .main_heading {
+  padding: 2rem 0;
+}
+.work_box_card {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.work_box_card .card:hover {
+  background-color: var(--bgcolor);
+}
+.work_box_card .card {
+  cursor: pointer;
+  width: 27rem;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.work_box_card .card i {
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: var(--bgcolor);
+  color: var(--primary-color);
+}
+.work_box_card .card:hover i {
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: white;
+  color: var(--primary-color);
+}
+.work_box_card .card h3 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+
+/* ------------------ How to work end ---------------------- */
+/* ------------------ How to app use start ---------------------- */
+
+.main_appuse {
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  padding: 9rem 0;
+}
+.use_left {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.use_left img {
+  width: 25rem;
+  border-radius: 2.5rem;
+}
+.use_rigth {
+  width: 60%;
+  padding: 1rem;
+  background-color: var(--bgcolor);
+}
+.use_heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  font-family: "Poppins", sans-serif;
+  padding: 1.5rem 0;
+}
+.use_rigth .para {
+  padding: 1.5rem 0;
+
+  padding-left: 3rem;
+}
+.use_rigth h1 {
+  font-size: 2rem;
+  color: var(--main-text-color);
+  padding: 1.5rem 0;
+}
+
+.use_rigth .list {
+  display: flex;
+  gap: 0.5rem;
+}
+.list div {
+  border: 0.2rem solid var(--primary-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list p {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+/* ------------------ How to app use end ---------------------- */
+/* ------------------ How to Service strart ---------------------- */
+.main_service {
+  padding: 15rem 0;
+}
+.main_service .main_heading {
+  width: 100%;
+  text-align: center;
+}
+.services_card_box {
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.services_card_box .service_card {
+  width: calc(33.3% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  gap: 1rem;
+}
+.service_card:hover {
+  background-color: var(--bgcolor);
+}
+.service_card i {
+  font-size: 1.8rem;
+  padding: 1rem;
+  background-color: var(--bgcolor);
+  color: var(--primary-color);
+}
+
+.service_card h2 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+/* ------------------ How to Service end ---------------------- */
+/* ------------------ How to main_contact start ---------------------- */
+.main_contect {
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rem 0;
+}
+.main_contect .info {
+  width: 40%;
+}
+.main_contect .form {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info h3 {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+.info img {
+  width: 30rem;
+  height: 30rem;
+}
+.contact_form {
+  width: 80%;
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--bgcolor);
+  /* border: 0.1rem solid var(--primary-color); */
+}
+.formRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  border: none;
+  outline: none;
+
+  /* outline: none;
+  border: 0.1rem solid var(--primary-color); */
+}
+.formRow input {
+  width: 50%;
+}
+.checkbox-row {
+  display: flex;
+  align-items: center;
+}
+.checkbox-row label {
+  font-size: 1.4rem;
+  padding-left: 0.3rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+input.checkbox {
+  width: auto;
+  display: inline-flexbox;
+}
+.contact_form textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  /* border: 0.1rem solid var(--primary-color); */
+}
+.contact_form .btn {
+  width: 100%;
+  margin: 0;
+  background: var(--primary-color);
+  color: #fff;
+}
+/* ------------------ How to main_contact end ---------------------- */
+/* ------------------ How to main_footer start ---------------------- */
+footer {
+  width: 100%;
+  background: #131e2d;
+}
+.main_footer {
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  color: var(--bgcolor);
+  gap: 1rem;
+  padding: 5rem;
+}
+.main_footer .f_link_box {
+  width: calc(25% - 1.2rem);
+  /* border: 0.1rem solid red; */
+}
+
+.f_link_box h2 {
+  color: var(--bgcolor);
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+.f_link_box ul {
+  list-style: none;
+}
+.f_link_box ul li {
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.main_footer .social ul {
+  display: flex;
+  gap: 1.5rem;
+}
+.main_footer .social ul li {
+  font-size: 2rem;
+}
+.copyrigth {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+/* ------------------ How to main_footer end ---------------------- */
+
+@media (max-width: 768px) {
+  .sin_btns {
+    display: none;
+  }
+  .hero_rigth {
+    justify-content: flex-end;
+  }
+  .hero_rigth .secondImg {
+    right: -2rem;
+  }
+  .hero_rigth .firstImg {
+    width: 90%;
+  }
+  .hero_tagline {
+    width: 130%;
+  }
+  .mail_box {
+    width: 120%;
+  }
+  .main_how_to_work {
+    width: 98%;
+    margin-top: -10rem;
+    height: max-content;
+  }
+  .work_box_card .card {
+    width: 100%;
+  }
+  .main_appuse {
+    flex-direction: column;
+  }
+  .use_left {
+    width: 100%;
+    padding: 8rem 0;
+  }
+  .use_left img {
+    width: 100%;
+  }
+  .use_rigth {
+    width: 100%;
+  }
+  .main_appuse-1 {
+    margin-top: 2rem;
+    flex-direction: column-reverse;
+  }
+  .services_card_box .service_card {
+    width: calc(50% - 2rem);
+    gap: 2rem;
+  }
+  .main_service {
+    padding: 10rem 0;
+  }
+  .main_contect {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0;
+  }
+  .main_contect .info {
+    width: 90%;
+  }
+  .main_contect .info img {
+    width: 100%;
+  }
+  .main_contect .form {
+    width: 100%;
+  }
+  .main_contect .form .contact_form {
+    width: 90%;
+  }
+  .main_footer .f_link_box {
+    width: calc(50% - 1.2rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    padding: 0 0.5rem;
+  }
+  .main_heading {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .hamberger {
+    display: block;
+  }
+
+  .manu ul {
+    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    padding: 2rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 100;
+  }
+  .manu ul.show {
+    top: 5rem;
+  }
+  section.hero {
+    min-height: calc(100vh - 5rem);
+  }
+  .main_hero {
+    flex-direction: column-reverse;
+    position: relative;
+    height: 80vh;
+  }
+  .hero_left {
+    position: absolute;
+    padding: 0.5rem;
+    width: 100%;
+    z-index: 10;
+  }
+  .hero_left p {
+    color: var(--main-text-color);
+  }
+  .use_rigth {
+    padding-bottom: 10rem;
+  }
+  .mail_box {
+    width: 100%;
+  }
+  .mail_box input {
+    padding: 1.2rem 1rem;
+  }
+  .hero_rigth {
+    position: absolute;
+    width: 100%;
+
+    /* display: none; */
+    padding: 0.5rem;
+  }
+  .hero_rigth .firstImg {
+    width: 100%;
+    opacity: 0.3;
+  }
+  .secondImg {
+    display: none;
+  }
+  .hero_tagline {
+    width: 100%;
+  }
+
+  .main_how_to_work {
+    height: max-content;
+  }
+  .main_service {
+    padding: 10rem 0;
+  }
+  .services_card_box .service_card {
+    width: calc(100% - 2rem);
+    gap: 2rem;
+  }
+  .main_contect .info {
+    padding-top: 10rem;
+  }
+  .main_contect .form {
+    padding-bottom: 10rem;
+  }
+}
